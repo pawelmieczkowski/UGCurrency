@@ -110,7 +110,7 @@ public class MainFrame extends JFrame {
 
     private JPanel initBottomPanel() {
         JPanel bottom = new JPanel();
-        bottom.setLayout(new GridLayout(2, 1));
+        bottom.setLayout(new GridLayout(1, 1));
 
         JPanel addForm = new JPanel();
 
@@ -132,17 +132,9 @@ public class MainFrame extends JFrame {
         JButton addBtn = new JButton("Dodaj");
         addForm.add(addBtn);
 
-        JPanel samplePanel = new JPanel();
-        JButton sampleBtn = new JButton("Dodaj dane przykładowe");
-
-        samplePanel.add(sampleBtn);
-
         bottom.add(addForm);
-        bottom.add(samplePanel);
 
         addBtn.addActionListener(e -> onAddClicked(nameField, datePicker, usdField));
-
-        sampleBtn.addActionListener(e -> onSampleClicked());
 
         return bottom;
     }
@@ -163,12 +155,6 @@ public class MainFrame extends JFrame {
         nameField.setText("");
         datePicker.setDate(null);
         usdField.setText("");
-    }
-
-    private void onSampleClicked() {
-        save("ACER Aspire", LocalDate.parse("2026-01-05"), "345");
-        save("DELL Latitude", LocalDate.parse("2026-01-11"), "543");
-        save("HP Victus", LocalDate.parse("2026-01-19"), "346");
     }
 
     private void save(String name, LocalDate date, String usd) {
