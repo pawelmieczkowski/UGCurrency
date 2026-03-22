@@ -34,7 +34,7 @@ class AppServiceTest {
     void shouldSaveComputerSuccessfully() throws ValidationException, RateFetchException {
         LocalDate date = LocalDate.of(2026, 3, 22);
         BigDecimal exchangeRate = BigDecimal.valueOf(4.5);
-        when(nbpService.getRate(date)).thenReturn(exchangeRate);
+        when(nbpService.getRate(any())).thenReturn(exchangeRate);
 
         appService.save("MyComputer", date, "1000");
 
