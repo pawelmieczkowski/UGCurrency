@@ -6,7 +6,7 @@
 - **JDK 21**
 
 ### Frontend
-- **Swing**I  
+- **Swing**
 - **LGoodDatePicker** 
     
 ## Prerequisites
