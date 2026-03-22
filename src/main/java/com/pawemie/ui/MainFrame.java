@@ -140,13 +140,9 @@ public class MainFrame extends JFrame {
         bottom.add(addForm);
         bottom.add(samplePanel);
 
-        addBtn.addActionListener(e -> {
-            onAddClicked(nameField, datePicker, usdField);
-        });
+        addBtn.addActionListener(e -> onAddClicked(nameField, datePicker, usdField));
 
-        sampleBtn.addActionListener(e -> {
-            onSampleClicked();
-        });
+        sampleBtn.addActionListener(e -> onSampleClicked());
 
         return bottom;
     }
